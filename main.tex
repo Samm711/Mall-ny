@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=50mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage{changepage}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{pdfpages}
+\usepackage[swedish]{cleveref}
+\graphicspath{ {./images/} }
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+
+\usepackage{needspace}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+\setlength{\parskip}{1em}
+\AtBeginDocument{\addtocontents{toc}{\protect\setlength{\parskip}{0pt}}}
+
+\makeatletter
+\renewcommand{\section}{\needspace{.25\textheight} \@startsection{section}{1}{0mm}
+  {\baselineskip}
+  {\baselineskip}{\Large\bfseries\scshape}}
+\renewcommand{\subsection}{\needspace{.15\textheight} \@startsection{subsection}{1}{0mm}
+  {\baselineskip}
+  {\baselineskip}{\large\bfseries\scshape}}
+\makeatother
+
+
+
+\tolerance=100000
+\hyphenpenalty=10000
+\hbadness=20000
+
+
+
+\title{Mall}
+\author{Namn}
+\date{Datum}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{.25pt}
+\renewcommand{\footrulewidth}{.25pt}
+
+\renewcommand{\contentsname}{Innehållsförteckning}
+
+\fancyhf{
+\rhead{Namn\\Arbete\\Skola}}
+
+\rfoot{\thepage}
+\pagenumbering{Roman}
+
+
+
+\begin{document}
+\maketitle
+\newpage
+\pagenumbering{arabic}
+\end{document}
